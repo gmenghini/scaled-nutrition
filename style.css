@@ -1,0 +1,23 @@
+body {
+	text-align: center;
+}
+
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+	font-family: arial;
+	padding: 2px;
+}
+
+th {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+table {
+	margin: 0 auto;
+}
+
+#container {
+	float: center;
+}

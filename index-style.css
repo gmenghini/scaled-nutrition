@@ -1,0 +1,165 @@
+/* 
+ * COLOR CODES
+ * #78DC69
+ * #69DC93
+ * #69DCCD
+ * #69B1DC
+ * #6978DC
+ * #9469DC
+ */
+
+
+* {box-sizing: border-box;}
+
+html {
+	font-style: georgia;
+}
+
+h1, h2, h3 {
+	font-style: georgia;
+}
+
+.container {
+	display: flex; 
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	text-align: center;
+	color: #212121;
+	border-style: none none solid none; 
+}
+
+.headerFont {
+	font-size: 3em;
+	margin: 0.5em 0.25em;
+}
+
+.leftContainer, .rightContainer {
+	width: 100%;
+}
+
+.calendar, .lineGraph, .barGraph, .pieChart, .tableDisplay {
+	width: 100%;
+}
+
+.calendar {
+	/*background-color: #060;*/
+}
+
+.image {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.calendarImage, .lineGraphImage {
+	height: 200px;
+	width: 200px;
+}
+
+.lineGraph {
+	/*background-color: #960;*/
+}
+
+.barGraph, .pieChart {
+	/*background-color: #C39;*/
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.barGraphImage {
+	width: 50%;
+	margin: auto;
+}
+
+.barGraphSelect, .pieChartSelect {
+	margin: auto;
+}
+
+.pieChart {
+	/*background-color: #6CF;*/
+}
+
+.pieChartImage {
+	width: 50%;
+	margin: auto;
+}
+
+
+/*
+ *
+ * TABLE DISPLAY
+ *
+ *
+ */
+
+.tableSection {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.tableDisplay {
+	/*background-color: #FC3;*/
+	text-align: center;
+	border-style: solid;
+}
+
+.link-button {
+	background: none;
+	border: none;
+	color: blue;
+	font-style: italic;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 1em;
+	font-family: serif;
+}
+
+table { 
+	border: none; border-collapse: collapse;
+}
+
+th {
+	border: none none solid none;
+	border-bottom: 1px solid #000;
+}
+
+table td{ 
+	border-left: 1px solid #000;
+}
+
+table td:first-child { 
+	border-left: none;
+}
+
+.footer {
+	border-style: solid none none none;
+	text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+	.leftContainer {
+		width: 33%;
+	}
+	.rightContainer {
+		width: 67%;
+	}
+}
+
+
+@media screen and (min-width: 1080px) {
+	.container, .header, .footer {
+		width: 1080px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
