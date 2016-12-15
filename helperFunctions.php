@@ -3,19 +3,20 @@
 		// connects to the appropriate database
 		// return value: PDO object
 		$HTTP_HOST = $_SERVER['HTTP_HOST'];
+		$credentials = parse_ini_file("../config.ini");
+		$host = $credentials['host'];
+		$dbname = $credentials['dbname'];
 		try {
 			if ($HTTP_HOST == "localhost") { // connect to the XAMMP database
-				if ($test == true) {
-					$db = new PDO('mysql:host=localhost;dbname=sandbox;charset=utf8mb4', 'root', 'hunt0131');
-				}
-				else {
-					$db = new PDO('mysql:host=localhost;dbname=garrettm_test_db;charset=utf8mb4', 'root', 'hunt0131');
-				}
+				$user = $credentials['testUsername'];
+				$password = $credentials['testPassword'];
 			}
 			else {	// connect to the Host Gator database
-				$db = new PDO('mysql:host=localhost;dbname=garrettm_test_db;charset=utf8mb4', 'garrettm_1', 'scaleLyf3');
+				$user = $credentials['user'];
+				$password = $credentials['password'];
 			}
 			// regardless of which database: tell PDO that we want to throw exceptions for every error
+			$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8mb4', $user, $password);
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $db;
 		} catch(PDOException $e){
